@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "usb_host.h": "c",
+        "gpio.h": "c",
+        "esp_log.h": "c"
+    }
+}
