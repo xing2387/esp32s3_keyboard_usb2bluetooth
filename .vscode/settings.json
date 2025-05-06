@@ -2,6 +2,14 @@
     "files.associations": {
         "usb_host.h": "c",
         "gpio.h": "c",
-        "esp_log.h": "c"
+        "esp_log.h": "c",
+        "esp_system.h": "c",
+        "esp_bt_defs.h": "c",
+        "hid_usage_mouse.h": "c",
+        "hid_host.h": "c",
+        "hid_usage_keyboard.h": "c",
+        "queue.h": "c",
+        "common.h": "c",
+        "esp_err.h": "c"
     }
 }
