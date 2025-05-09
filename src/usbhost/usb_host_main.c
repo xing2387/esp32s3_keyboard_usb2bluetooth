@@ -369,8 +369,11 @@ void hid_host_interface_callback(hid_host_device_handle_t hid_device_handle,
                     hid_host_keyboard_report_callback(data, data_length);
                 } else if (HID_PROTOCOL_MOUSE == dev_params.proto) {
                     hid_host_mouse_report_callback(data, data_length);
+                } else {
+                    ESP_LOGI(TAG, "~~~~~~~~~~~~~ dev_params.proto: %d", dev_params.proto);
                 }
             } else {
+                ESP_LOGI(TAG, "~~~~~~~~~~~~~ hid_host_generic_report_callback");
                 hid_host_generic_report_callback(data, data_length);
             }
 

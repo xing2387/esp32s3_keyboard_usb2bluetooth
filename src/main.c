@@ -22,10 +22,10 @@ void app_main(void) {
 }
 
 void on_usb_keyboard_event(hid_keyboard_input_report_boot_t *kb_report) {
-    ESP_LOGI(TAG, "USB Keyboard event: modifier: %d, key1: %d, key2: %d, key3: %d, key4: %d",
-             kb_report->modifier.val, kb_report->key[0], kb_report->key[1], kb_report->key[2],
-             kb_report->key[3]);
-    send_key_event(kb_report->modifier.val, kb_report->key, HID_KEYBOARD_KEY_MAX);
+    ESP_LOGI(TAG, "USB Keyboard event: modifier: %d, reserved: %d, key1: %d, key2: %d, key3: %d, key4: %d, key5: %d, key6: %d",
+             kb_report->modifier.val, kb_report->reserved, kb_report->key[0], kb_report->key[1], kb_report->key[2],
+             kb_report->key[3], kb_report->key[4], kb_report->key[5]);
+    send_key_event(kb_report->modifier.val, kb_report->key, HID_KEYBOARD_KEY_MAX /*6*/);
 }
 
 void on_usb_mouse_event(hid_mouse_input_report_boot_t *mouse_report) {
