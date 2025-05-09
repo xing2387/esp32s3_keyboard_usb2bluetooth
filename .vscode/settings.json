@@ -10,6 +10,10 @@
         "hid_usage_keyboard.h": "c",
         "queue.h": "c",
         "common.h": "c",
-        "esp_err.h": "c"
+        "esp_err.h": "c",
+        "hid_dev.h": "c",
+        "esp_wifi.h": "c",
+        "cstdint": "c",
+        "esp_hidd_prf_api.h": "c"
     }
 }
